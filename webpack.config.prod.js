@@ -23,7 +23,11 @@ var config = {
         test : /\.js$/,
         include : __dirname,
         loader : 'babel-loader'
-      }
+      },
+      {
+        test: /\.css$/,
+        loader: 'style!css?importLoaders=1!postcss'
+      },
     ]
   },
   plugins: [
