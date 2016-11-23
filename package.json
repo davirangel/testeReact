@@ -72,7 +72,7 @@
     "build:gulp": "gulp build",
     "build:webpack": "BABEL_DISABLE_CACHE=1 webpack --config ./webpack.config.prod.js",
     "build": "npm run cb && NODE_ENV=production npm run build:webpack",
-    "start:watch": "BABEL_DISABLE_CACHE=1 webpack --watch --config ./webpack.config.dev.js",
+    "start:watch": "webpack --watch --config ./webpack.config.dev.js",
     "start:server": "webpack-dev-server --config ./webpack.config.dev.js --hot --inline",
     "start": "npm run cb & NODE_ENV=development & npm run start:watch & npm run start:server"
   },
