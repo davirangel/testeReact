@@ -1,0 +1,9 @@
+/.test
+/.tmp
+/.sass-cache
+/node_modules
+/dist
+npm-debug*
+yarn.lock
+.vscode
+coverage/
