@@ -2,7 +2,7 @@ import webpack from "webpack";
 import path from "path";
 import rules from "./webpack.config.rules.babel";
 import HtmlWebpackPlugin from "html-webpack-plugin";
-const env = {"process.env.NODE_ENV": JSON.stringify(process.env.NODE_ENV)}
+const env = {"process.env.API_ENV": JSON.stringify(process.env.NODE_ENV)}
 const config = {
     devtool: "cheap-module-source-map",
     entry: {
@@ -14,7 +14,7 @@ const config = {
     },
     module: rules,
     plugins: [
-        new webpack.DefinePlugin({env}),
+        new webpack.DefinePlugin(env),
         new webpack.NamedModulesPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
         new HtmlWebpackPlugin({
